@@ -26,11 +26,8 @@ app.use('/users', usersRouter);
 
 var process_request = require('./apihandler');
 app.get('/question/:q', async function(req, res) {
-  res.write('Got a query: ' + req.params.q + "\n");
-  res.write('Processing...' + "\n");
-  let response = await process_request(req.params.q);
-  res.write('Request returned: ' + response)
-  res.end()
+  let response = await process_request(JSON.parse(req.params.q));
+  res.send(response)
 })
 
 // catch 404 and forward to error handler
