@@ -26,7 +26,15 @@ app.use('/users', usersRouter);
 
 var process_request = require('./apihandler');
 app.get('/question/:q', async function(req, res) {
-  let response = await process_request(JSON.parse(req.params.q));
+  let query;
+  try {
+    query = JSON.parse(req.params.q);
+  } catch(err) {
+    res.status(400)
+    res.render('error', {error:err})
+    return
+  }
+  let response = await process_request(query);
   res.send(response)
 })
 
