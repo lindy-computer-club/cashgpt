@@ -15,7 +15,7 @@
         <form>
             <div class="mb-3">
                 <label for="goalInput" class="form-label">What are your goals for the future?</label>
-                <input class="form-control" id="goalInput" aria-describedby="goals">
+                <input class="form-control" id="goalInput">
             </div>
             <div class="mb-3">
                 <label for="ageInput" class="form-label">What is your current age?</label>
@@ -23,44 +23,50 @@
             </div>
             <br>
             <div class="mb-3">
-                <label for="ageInput" class="form-label">What are your monthly expenses?</label>
-                <input class="form-control" id="ageInput">
+                <label for="incomeInput" class="form-label">What is your monthly income?</label>
+                <input class="form-control" id="incomeInput">
             </div>
             <div class="mb-3">
-                <label for="ageInput" class="form-label">What is your monthly income?</label>
-                <input class="form-control" id="ageInput">
+                <label for="expenseInput" class="form-label">What are your monthly expenses?</label>
+                <input class="form-control" id="expenseInput">
             </div>
             <br>
             <div class="mb-3">
-                <label for="ageInput" class="form-label">Do you have any savings?</label>
-                <input class="form-control" id="ageInput">
+                <label for="savingInput" class="form-label">Do you have any savings?</label>
+                <input class="form-control" id="savingInput">
             </div>
             <div class="mb-3">
-                <label for="ageInput" class="form-label">Do you have an emergency fund?</label>
-                <input class="form-control" id="ageInput">
+                <label for="fundInput" class="form-label">Do you have an emergency fund?</label>
+                <input class="form-control" id="fundInput">
             </div>
             <div class="mb-3">
-                <label for="ageInput" class="form-label">How much do you owe in loans?</label>
-                <input class="form-control" id="ageInput">
+                <label for="loanInput" class="form-label">How much do you owe in loans?</label>
+                <input class="form-control" id="loanInput">
             </div>
             <br>
             <div class="mb-3">
-                <label for="ageInput" class="form-label">What is the value of your assets?</label>
-                <input class="form-control" id="ageInput">
+                <label for="assetInput" class="form-label">What is the value of your assets?</label>
+                <input class="form-control" id="assetInput">
             </div>
             <div class="mb-3">
-                <label for="ageInput" class="form-label">What state do you live in?</label>
-                <input class="form-control" id="ageInput">
+                <label for="stateInput" class="form-label">What state do you live in?</label>
+                <input class="form-control" id="stateInput">
             </div>
             <div class="mb-3">
-                <label for="ageInput" class="form-label">What is your credit score?</label>
-                <input class="form-control" id="ageInput">
+                <label for="scoreInput" class="form-label">What is your credit score?</label>
+                <input class="form-control" id="scoreInput">
+            </div>
+            <br>
+            <button class="btn btn-warning" id="submit_reponse" onclick="return false;">Submit</button>
+            <br>
+            <br>
+            <div id="final_answer">
             </div>
             <br>
             <br>
-            <button type="submit" class="btn btn-warning">Submit</button>
         </form>
     </div>
+    <script src="javascripts/send_request.js"></script>
 </body>
 
 </html>

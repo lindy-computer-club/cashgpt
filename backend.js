@@ -16,9 +16,11 @@ async function airequest(openai_inst, data) {
             },
             {
                 "role": "user",
-                "content": data.message 
-                /* data is an object, and as such can be easily edited
-                to be multiple messages depending on our params */
+                "content": 
+`I am ${data.age} years old. I live in ${data.state} and my main goal right now is to ${data.goal}. 
+My income is \$${data.income}/month and my expenses are usually \$${data.expenses}/month.
+I have \$${data.savings} in savings and \$${data.funds} in emergency funds.
+My financial assets are worth \$${data.assets} and my total loans are worth \$${data.loans}. My credit score is ${data.credit_score}.`
                 
             },
             {
