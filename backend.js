@@ -1,21 +1,18 @@
 "use strict"
 
 function format_request(data) {
-    let response = "";
-    console.log(data.state)
-    console.log(data.credit)
-    response = response + (data.age         != "" ? `I am ${data.age} years old. `                  : '')
-    response = response + (data.state       != "" ? `I live in ${data.state}. `                     : '')
-    response = response + (data.goal        != "" ? `My main goal right now is to ${data.goal}. `   : "I don't have any specific goals right now. ")
-    response = response + (data.income      != "" ? `My income is \$${data.income}/month. `         : "I don't have any monthly income. ")
-    response = response + (data.expenses    != "" ? `My expenses are \$${data.expenses}/month. `    : "I don't have any monthly expenses. ")
-    response = response + (data.savings     != "" ? `I have \$${data.savings} in savings. `         : "I don't have any savings. ")
-    response = response + (data.funds       != "" ? `I have \$${data.funds} in emergency funds. `   : "I don't have any emergency funds. ")
-    response = response + (data.assets      != "" ? `All of my assets are worth \$${data.assets} `  : "I don't have any assets. ")
-    response = response + (data.loans       != "" ? `My loans are currently worth \$${data.loans} ` : "I don't have any outstanding loans. ")
-    response = response + (data.credit      != "" ? `My credit score is currently ${data.credit}. ` : "I don't have a credit card nor a credit score. ")
-    console.log(response)
-    return response;
+    let f_query = "";
+    f_query = f_query + (data.age         != "" ? `I am ${data.age} years old. `                  : '')
+    f_query = f_query + (data.state       != "" ? `I live in ${data.state}. `                     : '')
+    f_query = f_query + (data.goal        != "" ? `My main goal right now is to ${data.goal}. `   : "I don't have any specific goals right now. ")
+    f_query = f_query + (data.income      != "" ? `My income is \$${data.income}/month. `         : "I don't have any monthly income. ")
+    f_query = f_query + (data.expenses    != "" ? `My expenses are \$${data.expenses}/month. `    : "I don't have any monthly expenses. ")
+    f_query = f_query + (data.savings     != "" ? `I have \$${data.savings} in savings. `         : "I don't have any savings. ")
+    f_query = f_query + (data.funds       != "" ? `I have \$${data.funds} in emergency funds. `   : "I don't have any emergency funds. ")
+    f_query = f_query + (data.assets      != "" ? `All of my assets are worth \$${data.assets} `  : "I don't have any assets. ")
+    f_query = f_query + (data.loans       != "" ? `My loans are currently worth \$${data.loans} ` : "I don't have any outstanding loans. ")
+    f_query = f_query + (data.credit      != "" ? `My credit score is currently ${data.credit}. ` : "I don't have a credit card nor a credit score. ")
+    return f_query;
 }
 
 async function airequest(openai_inst, data) {
@@ -49,4 +46,4 @@ async function airequest(openai_inst, data) {
 }
 
 module.exports = airequest
-console.log('backend exists')
+console.log('Backend setup complete')
